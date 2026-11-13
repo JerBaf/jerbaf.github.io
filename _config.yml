@@ -1,0 +1,44 @@
+# Site identity ---------------------------------------------------------------
+title: Jeremy Baffou
+tagline: PhD student at EPFL # home page <title> becomes "Jeremy Baffou | PhD student at EPFL"
+first_name: Jeremy
+last_name: Baffou
+description: >-
+  Jeremy Baffou, PhD student at EPFL working on structured representations
+  for spatial biology.
+url: https://jerbaf.github.io
+baseurl: ""
+lang: en
+
+# Used to highlight my name in author lists (must match _data/publications.yml).
+author_name: Jeremy Baffou
+
+# Contact links shown on the home page. Leave a value empty to hide its icon.
+socials:
+  email: jeremy.baffou@epfl.ch
+  github: JerBaf
+  linkedin: j%C3%A9r%C3%A9my-baffou-25b095206
+  scholar:  # Google Scholar user id, e.g. "AbCdEfGhIjkL"
+  orcid:    # e.g. "0000-0000-0000-0000"
+contact_note: Feel free to reach out by email.
+
+# Build -----------------------------------------------------------------------
+# GitHub Pages builds this site natively; only whitelisted plugins work there.
+theme: null # no gem theme (Pages would otherwise add jekyll-theme-primer)
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/profile.jpg
+      twitter:
+        card: summary # square photo; the default large card would crop it
+
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

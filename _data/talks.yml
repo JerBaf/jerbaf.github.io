@@ -1,0 +1,21 @@
+# Talks and posters, newest first.
+# Fields: year, kind, title, venue, links (optional map of label -> URL).
+- year: 2026
+  kind: Invited talk
+  title: Studying tissue structures across scales
+  venue: Digital Pathology Colloquium, University of Bern
+
+- year: 2025
+  kind: Poster
+  title: Interpretable regime trajectories via generative graph state-space models
+  venue: "NeurIPS 2025 Workshop: New Perspectives in Graph Machine Learning"
+
+- year: 2025
+  kind: Poster
+  title: "From lesions to patients: An interpretable framework for longitudinal treatment response prediction"
+  venue: Symposium on Dynamical Systems for Health, EPFL
+
+- year: 2024
+  kind: Invited talk
+  title: Topology and geometry for representation of tumor micro-environments
+  venue: CHUV, Lausanne

@@ -1,0 +1,45 @@
+# Publications, newest first. Mirrors the CV bibliography (cv/template/own-bib.bib).
+# Fields:
+#   key       anchor id (/publications/#key)
+#   abbr      short venue badge
+#   authors   full list; the entry equal to site.author_name is highlighted
+#   selected  true to show on the home page
+#   links     optional map of label -> URL (rendered as buttons)
+- key: heron
+  title: Hierarchical Regime-Conditioned Dynamics for Spatiotemporal Graphs
+  authors: [Jeremy Baffou, Pascal Frossard, Dorina Thanou]
+  venue: Advances in Neural Information Processing Systems (NeurIPS)
+  abbr: NeurIPS
+  year: 2026
+  selected: true
+
+- key: regrass
+  title: Interpretable Regime Trajectories via Generative Graph State-Space Models
+  authors: [Jeremy Baffou, Adrien Depeursinge, Dorina Thanou]
+  venue: "NeurIPS Workshop: New Perspectives in Graph Machine Learning"
+  abbr: NeurIPS Workshop
+  year: 2025
+  selected: true
+  links:
+    OpenReview: https://openreview.net/forum?id=IsnRPVWGZ5
+    PDF: https://openreview.net/pdf/867e4d70a2194a8e0b5dd468991da371057bc73a.pdf
+
+- key: ethic
+  title: "Machine Learning–Based Patient Preference Prediction: A Proof of Concept"
+  authors: [Georg Starke, Laura Schopp, Clément Meier, Jeremy Baffou, Dorina Thanou, Jürgen Maurer, Ralf J. Jox]
+  venue: NEJM AI
+  abbr: NEJM AI
+  year: 2025
+  selected: true
+  links:
+    DOI: https://doi.org/10.1056/AIoa2500265
+
+- key: oct
+  title: Importance of OCT-derived biomarkers for the recurrence of central serous chorioretinopathy using statistics and predictive modelling
+  authors: [Emilien Seiler, Léon Delachaux, Jennifer Cattaneo, Ali Garjani, Thibaud Martin, Alexia Duriez, Jeremy Baffou, Sepehr Mousavi, Ilenia Meloni, Ciara Bergin, Mattia Tomasoni, Chiara M. Eandi]
+  venue: Scientific Reports
+  abbr: Sci. Rep.
+  year: 2024
+  links:
+    DOI: https://doi.org/10.1038/s41598-024-75275-7
+    PDF: https://www.nature.com/articles/s41598-024-75275-7.pdf

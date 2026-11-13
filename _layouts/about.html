@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<header class="page-header">
+  <h1 class="page-title">{{ site.first_name }} <b>{{ site.last_name }}</b></h1>
+</header>
+<article>
+  <img class="profile" src="{{ '/assets/img/profile.jpg' | relative_url }}" alt="Photo of {{ site.first_name }} {{ site.last_name }}" width="600" height="600">
+  {{ content }}
+  <div class="clearfix"></div>
+
+  {% assign selected = site.data.publications | where: "selected", true %}
+  {% if selected.size > 0 %}
+    <h2><a class="plain" href="{{ '/publications/' | relative_url }}">Selected Publications</a></h2>
+    <div class="publications">
+      {% for pub in selected %}{% include publication.html pub=pub %}{% endfor %}
+    </div>
+  {% endif %}
+
+  {% include social.html %}
+</article>
