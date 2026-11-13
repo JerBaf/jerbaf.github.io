@@ -8,4 +8,4 @@ export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"   # Ruby 3.3, as on GitHub Pa
 bundle install && bundle exec jekyll serve           # http://localhost:4000
 ```
 
-Content lives in `_config.yml` (name, tagline, description, contact links), `index.md`, `research.md`, `_data/publications.yml`, `_data/talks.yml` and `assets/pdf/cv.pdf`.
+Content lives in `_config.yml` (name, tagline, description, contact links), `index.md`, `research.md`, `_data/publications.yml` and `assets/pdf/cv.pdf`.

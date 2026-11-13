@@ -106,7 +106,6 @@ img { max-width: 100%; height: auto; }
 /* Page header --------------------------------------------------------------- */
 .page-header { margin: 3rem 0 2rem; }
 .page-title { font-size: 2.5rem; margin: 0; }
-.page-description { margin: 0.5rem 0 0; font-size: 0.95rem; color: var(--muted); }
 
 /* About --------------------------------------------------------------------- */
 .profile {
@@ -162,12 +161,6 @@ img { max-width: 100%; height: auto; }
   text-transform: uppercase;
 }
 .pub-links a:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); text-decoration: none; }
-
-/* Talks --------------------------------------------------------------------- */
-.talk { margin-bottom: 1.5rem; }
-.talk-title { font-weight: 400; }
-.talk-meta { color: var(--muted); }
-.talk-kind { color: var(--text); font-weight: 700; }
 
 /* CV ------------------------------------------------------------------------ */
 .cv-embed { width: 100%; height: 80vh; min-height: 500px; border: 0; }

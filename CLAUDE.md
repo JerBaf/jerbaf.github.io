@@ -15,7 +15,7 @@ Visually modelled on https://oliverphilcox.github.io (al-folio theme), but rebui
   publications/own-bib.bib, research-experience, academic-services, awards, side-activities, skills).
   `employment.tex`, `misc.tex` and `referee*.tex` are template placeholders: never use them.
   Don't invent facts. Anything on the site should be traceable to the CV or to a verified public source.
-- Deliberate choices: the 2024 CHUV talk venue is a placeholder in the CV ("Symposium on ..."), so the site shows "CHUV, Lausanne".
+- Deliberate choices: there is no Talks page (removed on request, Nov 2026); talks are only mentioned in `research.md`.
   The NeurIPS 2025 NPGML workshop website is not linked because its domain lapsed into spam. Link the OpenReview pages instead.
 
 ## Commands
@@ -33,11 +33,10 @@ bundle exec jekyll build         # outputs to _site/
 ## Layout
 
 - `_config.yml`: name, tagline, social links (`socials:`; an empty value hides that icon), `author_name` (bolded in author lists).
-- `index.md` (About, `layout: about`), `publications.md`, `talks.md`, `research.md`, `cv.md`, `404.html`.
+- `index.md` (About, `layout: about`), `publications.md`, `research.md`, `cv.md`, `404.html`.
   Navbar entries come from `nav: true` + `nav_order` in each page's front matter.
 - `_data/publications.yml`: one entry per paper. `selected: true` shows it on the home page; `links` is a map of label → URL.
-- `_data/talks.yml`: talks and posters, newest first.
-- `_layouts/`: `default` (shell), `page` (title + description), `about` (home: photo, bio, selected papers, socials).
+- `_layouts/`: `default` (shell), `page` (title), `about` (home: photo, bio, selected papers, socials).
 - `_includes/`: `header`, `publication` (one paper), `social`, `icon` (inline Font Awesome SVGs, CC BY 4.0).
 - `assets/css/main.css`: all styles. Theme colours are CSS variables at the top: light by default, dark via
   `prefers-color-scheme` or the `data-theme` attribute set by `assets/js/theme.js`. Accent `#b6073f` matches the CV.
@@ -47,7 +46,6 @@ bundle exec jekyll build         # outputs to _site/
 ## Common updates
 
 - **New paper**: add an entry at the top of `_data/publications.yml`. Use the same author spelling as `author_name`.
-- **New talk**: add an entry at the top of `_data/talks.yml`.
 - **Refresh the CV**: after recompiling the LaTeX CV,
   `cp /Users/jeremy/Documents/Perso/official/cv/template/cv-llt.pdf assets/pdf/cv.pdf`.
 - **Google Scholar / ORCID**: fill `socials.scholar` / `socials.orcid` in `_config.yml`. The icons appear automatically.
