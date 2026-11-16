@@ -1,9 +1,13 @@
 <header class="site-header">
   <nav class="container nav" aria-label="Main">
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links" hidden>
+      {%- include icon.html name="bars" -%}
+      {%- include icon.html name="xmark" -%}
+    </button>
     {% unless page.url == "/" %}
       <a class="brand" href="{{ '/' | relative_url }}">{{ site.first_name }} <b>{{ site.last_name }}</b></a>
     {% endunless %}
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       {% assign nav_pages = site.pages | where: "nav", true | sort: "nav_order" %}
       {% for p in nav_pages %}
         <li>
@@ -12,12 +16,10 @@
           </a>
         </li>
       {% endfor %}
-      <li>
-        <button id="theme-toggle" class="theme-toggle" type="button" title="Toggle dark mode" aria-label="Dark mode" hidden>
-          {%- include icon.html name="moon" -%}
-          {%- include icon.html name="sun" -%}
-        </button>
-      </li>
     </ul>
+    <button id="theme-toggle" class="theme-toggle" type="button" title="Toggle dark mode" aria-label="Dark mode" hidden>
+      {%- include icon.html name="moon" -%}
+      {%- include icon.html name="sun" -%}
+    </button>
   </nav>
 </header>

@@ -39,7 +39,7 @@ bundle exec jekyll build         # outputs to _site/
 - `_layouts/`: `default` (shell), `page` (title), `about` (home: photo, bio, selected papers, socials).
 - `_includes/`: `header`, `publication` (one paper), `social`, `icon` (inline Font Awesome SVGs, CC BY 4.0).
 - `assets/css/main.css`: all styles. Theme colours are CSS variables at the top: light by default, dark via
-  `prefers-color-scheme` or the `data-theme` attribute set by `assets/js/theme.js`. Accent `#b6073f` matches the CV.
+  `prefers-color-scheme` or the `data-theme` attribute set by `assets/js/main.js` (theme toggle + mobile menu). Accent `#b6073f` matches the CV.
 - `assets/fonts/`: self-hosted Roboto (latin; 300, 300 italic, 400, 700).
 - `assets/pdf/cv.pdf`: copy of the compiled CV.
 

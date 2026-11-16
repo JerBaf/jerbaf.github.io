@@ -94,14 +94,17 @@ img { max-width: 100%; height: auto; }
 }
 .nav-links a { color: var(--text); font-weight: 400; }
 .nav-links a:hover, .nav-links a.active { color: var(--accent); text-decoration: none; }
-.theme-toggle {
+.theme-toggle, .menu-toggle {
   display: flex; padding: 0.25rem; border: 0; background: none;
-  color: var(--text); font-size: 1.05rem; cursor: pointer;
+  color: var(--text); font-size: 1.05rem; cursor: pointer; -webkit-tap-highlight-color: transparent;
 }
-.theme-toggle[hidden] { display: none; }
-.theme-toggle:hover { color: var(--accent); }
+.theme-toggle { margin-left: 1.1rem; }
+.theme-toggle[hidden], .menu-toggle { display: none; } /* the menu button is for small screens only */
+.theme-toggle:hover, .menu-toggle:hover { color: var(--accent); }
 .icon-moon { display: var(--show-moon); }
 .icon-sun { display: var(--show-sun); }
+.menu-toggle[aria-expanded="true"] .icon-bars,
+.menu-toggle[aria-expanded="false"] .icon-xmark { display: none; }
 
 /* Page header --------------------------------------------------------------- */
 .page-header { margin: 3rem 0 2rem; }
@@ -177,10 +180,19 @@ img { max-width: 100%; height: auto; }
 
 /* Small screens ------------------------------------------------------------- */
 @media (max-width: 600px) {
-  html { scroll-padding-top: 0; }
-  .site-header { position: static; } /* the wrapped nav would take too much of a phone screen */
-  .brand { margin-top: 0.5rem; }
-  .nav-links { margin-left: 0; gap: 0.25rem 0.5rem; }
+  .nav-links { margin-left: 0; gap: 0.25rem 0.5rem; } /* without JS: plain wrapped tabs */
+  .theme-toggle { margin-left: auto; }
+  /* With JS, the links fold into a drop-down menu opened by the button on the left. */
+  .menu-toggle:not([hidden]) { /* full bar height: keeps the bar steady when the menu opens */
+    display: flex; align-items: center; height: 56px; padding: 0 0.75rem; margin-left: -0.75rem;
+  }
+  .menu-toggle:not([hidden]) ~ .nav-links {
+    display: none; order: 1; flex-basis: 100%; flex-direction: column; align-items: stretch;
+    gap: 0; padding: 0.25rem 0 0.5rem; border-top: 1px solid var(--divider);
+    max-height: calc(100vh - 56px); max-height: calc(100dvh - 56px); overflow-y: auto; /* short screens */
+  }
+  .menu-toggle[aria-expanded="true"]:not([hidden]) ~ .nav-links { display: flex; }
+  .menu-toggle:not([hidden]) ~ .nav-links a { display: block; padding: 0.6rem 0; }
   .page-title { font-size: 2.1rem; }
   .profile { float: none; display: block; width: 60%; margin: 0 auto 1.5rem; }
   .pub { grid-template-columns: 1fr; gap: 0.4rem; }
